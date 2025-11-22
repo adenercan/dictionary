@@ -4,8 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dictionary</title>
+
 </head>
 <body>
+    <header>
+        <div class="header-top">
+            <div class="logo-container">
+                <img src="assets/img/dictionary-icon.svg" alt="Dictionary Icon">
+            </div>
+
+            <div class="controls-container">
+                <div class="font-selector">
+                    <button class="selected-font">
+                        <span id="current-font">Sans Serif</span>
+                        <img src="assets/img/list-arrow.svg" alt="Arrow">
+                    </button>
+                    <ul class="font-menu hidden" id="font-menu">
+                        <li id="sans-serif">Sans Serif</li>
+                        <li id="serif">Serif</li>
+                        <li id="mono">Mono</li>
+                    </ul>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="theme-switcher">
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+
+                    <div class="icon-container">
+                        <img src="assets/img/moon-icon.svg" alt="Light Mode" class="theme-icon light-icon">
     
+                        <img src="assets/img/active-moon-icon.svg" alt="Dark Mode" class="theme-icon dark-icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="search-container">
+                <form id="search-form" class="search-box">
+                    <input type="text" id="search-input" placeholder="Search for any word...">
+                    <button type="submit" class="search-btn">
+                        <img src="assets/img/search.svg" alt="Search">
+                    </button>
+                </form>
+                <p id="error-msg" class="error-text">Whoops, can't be empty...</p>
+            </div>
+        </div>
+    </header>
 </body>
 </html>
