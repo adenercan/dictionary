@@ -1,0 +1,196 @@
+:root{
+    /* Colors */
+    --color-black: #050505;
+    --color-dark-grey: #1F1F1F;
+    --color-mid-grey: #2D2D2D;
+    --color-light-grey: #757575;
+    --color-bg-light: #F4F4F4;
+    --color-white: #FFFFFF;
+    --color-purple: #A445ED;
+    --color-red: #FF5252;
+
+    /* Font Families */
+    --font-sans: "Inter", sans-serif;
+    --font-serif: "Lora", serif;
+    --font-mono: "Inconsalata", monospace;
+
+    /* Default Settings*/
+    --body-bg: var(--color-white);
+    --text-color: var(--color-mid-grey);
+    --current-font: var(--font-sans);
+}
+
+body.dark-theme{
+    --body-bg: var(--color-black);
+    --text-color: var(--color-white);
+    --color-bg-light: var(--color-dark-grey);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, main{
+    width: 100%;
+    max-width: 737px;
+}
+
+img{
+    max-width: 100%;
+}
+
+header{
+    padding: 24px;
+}
+
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.logo-container{
+    height: 34px;
+}
+.controls-container{
+    display: flex;
+    align-items: center;
+}
+
+.font-selector{
+    position: relative;
+    margin-right: 26px;
+}
+
+.selected-font{
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--text-color);
+    font-family: var(--font-sans);
+}
+
+.font-menu{
+    position: absolute;
+    top: 35px;
+    right: 0;
+    width: 183px;
+    background-color: var(--body-bg);
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    z-index: 10;
+}
+
+body.dark-theme .font-menu{
+    box-shadow: 0px 5px 30px var(--color-purple);
+}
+
+.font-menu li{
+    cursor: pointer;
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    transition: color 0.2s;
+    list-style: none;
+}
+
+.font-menu li:last-child{
+    margin-bottom: 0;
+}
+
+.font-menu li:hover{
+    color: var(--color-purple);
+}
+
+/* Going to add a hidden class with js */
+.hidden{
+    display: none;
+}
+
+.divider{
+    width: 1px;
+    height: 32px;
+    background-color: #E9E9E9;
+    margin-right: 16px;
+}
+
+.theme-switcher{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    background-color: var(--color-light-grey);
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.slider:before{
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider{
+    background-color: var(--color-purple);
+}
+
+input:checked + .slider::before{
+    transform: translateX(20px);
+}
+
+.theme-icon{
+    width: 22px;
+    height: auto;
+    display: block;
+}
+
+.dark-icon{
+    display: none;
+    stroke: var(--color-purple);
+}
+
+body.dark-theme .light-icon{
+    display: none;
+}
+
+body.dark-theme .dark-icon{
+    display: block;
+}
