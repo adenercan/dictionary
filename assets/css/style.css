@@ -8,6 +8,8 @@
     --color-white: #FFFFFF;
     --color-purple: #A445ED;
     --color-red: #FF5252;
+    --play-btn-color:#E8D0FA;
+    --play-btn-before-color: #A445ED;
 
     /* Font Families */
     --font-sans: "Inter", sans-serif;
@@ -24,6 +26,7 @@ body.dark-theme{
     --body-bg: var(--color-black);
     --text-color: var(--color-white);
     --color-bg-light: var(--color-dark-grey);
+    --play-btn-color: #2D153F;
 }
 
 *{
@@ -34,6 +37,8 @@ body.dark-theme{
 
 body{
     font-family: var(--current-font);
+    background-color: var(--body-bg);
+    color: var(--text-color);
 }
 
 header, main{
@@ -270,7 +275,7 @@ body.dark-theme .dark-icon{
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background-color: #E8D0FA;
+    background-color: var(--play-btn-color);
     border: none;
     cursor: pointer;
     display: flex;
