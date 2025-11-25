@@ -340,20 +340,25 @@ body.dark-theme .part-of-speech .line{
 
 .definitions ul{
     list-style: none;
+    
 }
 
 .definitions li{
-    position: relative;
     margin-bottom: 13px;
     line-height: 24px;
     font-size: 15px;
 }
 
 .definitions li::before{
-    content: "•";
-    color: var(--color-purple);
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    left: 0;
+    top: 10px;
     width: 5px;
-    margin-right: 15px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--color-purple);
 }
 
 .example{
@@ -407,6 +412,18 @@ body.dark-theme .part-of-speech .line{
     text-decoration: underline;
     align-items: center;
     justify-content: center;
+}
+
+.no-result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.no-result p{
+    text-align: center;
 }
 
 /* Tablet */
