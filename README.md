@@ -2,6 +2,8 @@
 
 A clean and customizable **dictionary web application** built to practice real-world JavaScript concepts such as **API consumption, async/await, fetch**, and basic **UI customization features**.
 
+🔗 Live demo: https://adenercan-dictionary.netlify.app/
+
 This project is part of my frontend development journey and focuses on building a **functional, readable, and user-friendly** application.
 
 ## 🚀 Features
